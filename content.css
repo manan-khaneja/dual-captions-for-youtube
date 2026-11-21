@@ -1,0 +1,33 @@
+#ctb-box {
+  position: absolute;
+  z-index: 60;
+  left: 50%;
+  top: 6%;
+  transform: translateX(-50%);
+  max-width: 70%;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font: 500 20px/1.35 Roboto, Arial, sans-serif;
+  text-align: center;
+  cursor: grab;
+  user-select: none;
+}
+
+#ctb-box.ctb-dragging {
+  cursor: grabbing;
+}
+
+#ctb-box.ctb-idle {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 14px;
+}
+
+.ytp-fullscreen #ctb-box {
+  font-size: 30px;
+}
+
+.ytp-fullscreen #ctb-box.ctb-idle {
+  font-size: 18px;
+}

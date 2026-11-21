@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Dual Captions for YouTube",
+  "version": "1.0",
+  "description": "Reads the caption currently shown on a YouTube video and shows its translation in a small draggable box.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://translate.googleapis.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
